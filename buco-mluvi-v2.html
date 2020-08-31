@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <link rel="icon" href="https://media.discordapp.net/attachments/646672282504396800/719658830664826920/postih-buco.png">
+    <title>buco v2</title>
+    <style>
+        br {
+            user-select: none;
+        }
+        .dole {
+          user-select: none;
+        }
+        textarea {
+          resize: none;
+        }
+        video {
+          pointer-events: none;
+        }
+    </style>
+</head>
+<body bgcolor="grey" id="body">
+   <center>
+    <img id="buco" src="https://media.discordapp.net/attachments/646672282504396800/719658830664826920/postih-buco.png" width="200" height="200">
+    <br>
+    <br>
+    <input type="button" id="tlacitko" value="buco" onmousedown="mouseDown();soundon();" onmouseup="mouseUp();soundoff();">
+    <br>
+    <br>
+    <div id="link.customimg" style="visibility: hidden;">
+        <p>mluvi</p>
+         <input type="text" placeholder="link" id="img-1" onchange="change1()">
+        <p>nemluvi</p>
+         <input type="text" placeholder="link" id="img-2" onchange="change2()">
+      </div>
+    <br>
+    <br>
+    <br>
+    <textarea rows="5" cols="50" id="textareabuca" style="visibility: hidden;"></textarea>
+    <br>
+    <button id="tlacitkonamluveni" onclick="bucocte()" style="visibility: hidden;">řikaj</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="dole">
+     <font face="verdana" size="2">
+      <input id="button.swagbuco"  class="tlacitka" style="visibility: hidden;" type="button" onclick="swagbuco()" value="swag edice">
+      <input id="button.papirbuco" class="tlacitka" style="visibility: hidden;" type="button" onclick="papirbuco()" value="papír edice">
+      <input id="button.zpivabuco" class="tlacitka" style="visibility: hidden;" type="button" onclick="zpivabuco()" value="buco zpiva">
+      <input id="button.customimgs"class="tlacitka" style="visibility: hidden;" type="button" onclick="showcustom()" value="custom images">
+      <input id="button.soundbuco" class="tlacitka" style="visibility: hidden;" type="button" onclick="soundbuco()" value="sound on">
+      <input id="button.textbuco" class="tlacitka" style="visibility: hidden;" type="button" onclick="textbuco();" value="text buco">
+      <input id="button.changelogbuco" class="tlacitka" style="visibility: hidden;" type="button" onclick="changelogbuco()" value="changelog buco">
+      <br>
+      <br>
+      <br>
+      <input type="button" id="menu" onclick="show()" value="menu">
+       <p onclick="dipro()">by dipro</p>
+     </font>
+    </div>
+   </center>
+    <script>
+      // original code treba z v1
+      var buco = "https://media.discordapp.net/attachments/646672282504396800/718568239709290507/buco-mluvi.png";
+      var buco1 = "https://media.discordapp.net/attachments/646672282504396800/718568241412440074/buco-nemluvi.png";
+      var audio = new Audio ("https://pizzaroot.altervista.org/uploads/a1d6f08e59e38bfe6d1d0d53f59be0375341ada0544c7edd77d516a96f156e74.mp3");
+      var vol = 0;
+
+        function change1() {
+        var input1  = document.getElementById("img-1").value;
+
+        buco = input1;
+      }
+        function change2() {
+        var input2  = document.getElementById("img-2").value;
+
+        buco1 = input2;
+      }
+      
+      function mouseDown() {
+          document.getElementById("buco").src= buco;
+      }
+
+        function mouseUp() {
+          document.getElementById("buco").src= buco1;
+      }
+        function soundon() {
+          audio.currentTime = 0;
+          audio.play();
+          audio.volume = vol;
+        }
+        function soundoff() {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+
+
+    </script>
+
+    <script>
+      function show() {
+  var x = document.getElementById("button.customimgs"); // buco vlastni obrazky op
+  if (x.style.visibility == "hidden") {
+    x.style.visibility = "unset";
+  } else {
+    x.style.visibility = "hidden";
+  }
+  var x1 = document.getElementById("button.papirbuco"); // buco z papiru
+  if (x1.style.visibility == "hidden") {
+    x1.style.visibility = "unset";
+  } else {
+    x1.style.visibility = "hidden";
+  }
+  var x2 = document.getElementById("button.swagbuco"); // buco frajer
+  if (x2.style.visibility == "hidden") {
+    x2.style.visibility = "unset";
+  } else {
+    x2.style.visibility = "hidden";
+  }
+  var x2 = document.getElementById("button.soundbuco"); // buco sfx
+  if (x2.style.visibility == "hidden") {
+    x2.style.visibility = "unset";
+  } else {
+    x2.style.visibility = "hidden";
+  }
+  var x3 = document.getElementById("button.textbuco"); // buco text
+  if (x3.style.visibility == "hidden") {
+    x3.style.visibility = "unset";
+  } else {
+    x3.style.visibility = "hidden";
+  }
+  var x4 = document.getElementById("button.changelogbuco"); // buco ti řekne co se změnilo
+  if (x4.style.visibility == "hidden") {
+    x4.style.visibility = "unset";
+  } else {
+    x4.style.visibility = "hidden";
+  }
+  var x5 = document.getElementById("button.zpivabuco"); // buco ti zazpívá eyyyyyyyyy
+  if (x5.style.visibility == "hidden") {
+    x5.style.visibility = "unset";
+  } else {
+    x5.style.visibility = "hidden";
+  }
+
+// tohle je třeba začátek tlačítek buco
+
+}
+     function showcustom() {
+        var y = document.getElementById("link.customimg");
+         if (y.style.visibility == "hidden") {
+           y.style.visibility = "unset";
+         } else {
+          y.style.visibility = "hidden";
+         }
+  
+   }    
+
+    function papirbuco() {  // papirbuco by vanesa <3
+        if (window.buco == "https://media.discordapp.net/attachments/646672282504396800/718568239709290507/buco-mluvi.png") {
+         buco = "https://cdn.discordapp.com/attachments/646672282504396800/737028345212174426/papirbuco-mluvi.jpg";
+        } else {
+            buco = "https://media.discordapp.net/attachments/646672282504396800/718568239709290507/buco-mluvi.png";
+        }
+        if (window.buco1 == "https://media.discordapp.net/attachments/646672282504396800/718568241412440074/buco-nemluvi.png") {
+         buco1 = "https://cdn.discordapp.com/attachments/646672282504396800/737028344708595773/papirbuco-nemluvi.jpg";
+        } else {
+            buco1 = "https://media.discordapp.net/attachments/646672282504396800/718568241412440074/buco-nemluvi.png";
+        }
+    }
+
+    function swagbuco() { // swagbuco by pogacek
+        if (window.buco == "https://media.discordapp.net/attachments/646672282504396800/718568239709290507/buco-mluvi.png") {
+         buco = "https://cdn.discordapp.com/attachments/679460987920973824/742130033937743992/swag-buco.png";
+        } else {
+            buco = "https://media.discordapp.net/attachments/646672282504396800/718568239709290507/buco-mluvi.png";
+        }
+        if (window.buco1 == "https://media.discordapp.net/attachments/646672282504396800/718568241412440074/buco-nemluvi.png") {
+          buco1 = "https://cdn.discordapp.com/attachments/679460987920973824/742130031911895090/coze-buco.png" ; 
+        } else {
+            buco1 = "https://media.discordapp.net/attachments/646672282504396800/718568241412440074/buco-nemluvi.png";
+        }
+    }
+
+    function soundbuco() { 
+      var onoff = document.getElementById("button.soundbuco").value // buco zpiva epicky
+      if (onoff == "sound off") {
+        document.getElementById("button.soundbuco").value = "sound on"; 
+        window.vol = 0;   
+
+    } 
+    else {
+        document.getElementById("button.soundbuco").value = "sound off";
+        window.vol = 1;
+    }
+}
+    function textbuco() {
+  var y1 = document.getElementById("textareabuca"); // useless mrdka
+  var y2 = document.getElementById("tlacitkonamluveni");
+  if (y1.style.visibility == "hidden") {
+    y1.style.visibility = "unset";
+  } else {
+    y1.style.visibility = "hidden";
+  }
+  if (y2.style.visibility == "hidden") {
+    y2.style.visibility = "unset";
+  } else {
+    y2.style.visibility = "hidden";
+  }
+
+
+    }
+    
+    function changelogbuco() { // čenčlok
+      alert("                                      ~~buco changelog kamo~~ \n \n  takze tohle je buco mluvi v2 kamo jj a par istregu \n \n 1) Přidáni swagbuco, papírbuco (papírbuco by vanesa <3) a také možnost vlastního buca. \n 2) Přidáno buco sound efekty, buco zpívá (mitai samozřejmě xd) a také TTS buco. \n                                  ~buco-mluvi-v2 by Dipro240 <3 ")
+    }
+
+    function zpivabuco() { //buco zpiva jop ale predtim mluvil
+      document.getElementById("body").style.backgroundColor = "black";
+      document.getElementById("body").style.color = "white";
+      document.title = "buco zpiva"
+      document.getElementById("body").innerHTML = "<center><video autoplay width='1500' height='700' controls> <source src='https://cdn.discordapp.com/attachments/441957310072487947/738784744342421545/buco_mitai.mp4' type='video/mp4'>nefakci ti to ha</video></center";
+        setTimeout(function(){ close(); alert("kamo buco te vojede hahah otoc se"); }, 30000);
+    } 
+    
+    function bucocte() { // buco cte no chapes to
+      var kalkuluju = document.getElementById("textareabuca").value;
+      var pocet = kalkuluju.split(/[^\s]+/).length - 1;
+
+      setTimeout(function(){document.getElementById("buco").src = window.buco1;}, pocet * 300); //buco mluvi to co cetl jj
+      document.getElementById("buco").src = window.buco;
+      var textos = document.getElementById("textareabuca").value;
+      const msg = new SpeechSynthesisUtterance();
+      msg.volume = 1;
+      msg.rate = 1.3;
+      msg.pitch = 0.5;
+      msg.text  = textos;
+
+      msg.lang = 'cs-CZ';
+      speechSynthesis.speak(msg); 
+      
+      if (document.getElementById("textareabuca").value == "drsnej buco") { //bucocore epicky fuzo ma v usich stojaka
+        window.open("https://www.youtube.com/playlist?list=PLg2UVUv71AH7POiacaREG4n36W9FdJZ9j", "_blank, scrollbars=no, resizable=no");
+      }
+
+      
+    }
+    </script>
+    <script>
+      function dipro() {
+      var vokno = window.open("", "_blank", "width=500,height=500,left=500,top=100")
+       vokno.document.write("<title>owo.ce</title><center><h1>buco kamo typku frajere tenhle web dělal dipro flexouš<br>fakt hodne epicke special za 17 subs ok cau</h1></center>");
+      }
+    </script>
+    <script>
+      if (navigator.userAgent.indexOf("Edg") != -1) { //edgy detector
+        console.log(`ok doufam ze to bude fakcit`)
+      } else {
+        alert('kamo nevim jako fakt ale tvuj beowser je kokot tak asi nepojede tts sorry :(')
+      }
+    </script>
+</body>
+</html>
